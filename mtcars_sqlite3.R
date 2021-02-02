@@ -4,7 +4,7 @@
 library(dbplyr)
 data(mtcars)
 
-setwd("/Users/liz/Documents/class_week4/")
+setwd("/Users/liz/Documents/AdvancedInformatics_Week4/")
 
 # Create a connection ("con") to a database file:
 con <- DBI::dbConnect(RSQLite::SQLite(), snakemake@output[[1]])
