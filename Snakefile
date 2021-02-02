@@ -1,9 +1,10 @@
 rule all:
     input: 
-        'data/mtcars_sqlite3',
         'plots/mtcars.png'
 
-rule get:
+rule get_data:
+    input:
+	'mtcars_sqlite3.R'
     output:
         'data/mtcars_sqlite3'
     script: 
@@ -11,7 +12,8 @@ rule get:
 
 rule plot:
     input:
-        'data/mtcars_sqlite3'
+        'data/mtcars_sqlite3',
+	'mtcars_plots.py'
     output:
         'plots/mtcars.png'
     script: 
